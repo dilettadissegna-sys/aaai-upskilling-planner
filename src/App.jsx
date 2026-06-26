@@ -1,7 +1,6 @@
 import { useState, useMemo } from "react";
 import { Search, ChevronRight, Sparkles, ArrowLeft, Loader2, Target, Wrench, CalendarClock, MessageSquareText, RotateCcw } from "lucide-react";
 
-// lastminute.com brand system
 const C = {
   pink: "#f2007d",
   sunset: "#441f72",
@@ -12,8 +11,6 @@ const C = {
   sand: "#f3ece1",
 };
 
-// Career Journey Framework — roles grounded in the source document
-// Each role carries its mission and key responsibilities
 const FRAMEWORK = {
   Corporate: {
     mission: "Sets direction and governance",
@@ -239,7 +236,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');`}</style>
 
       <div className="max-w-3xl mx-auto px-5 py-10">
-        {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: C.pink }}>
@@ -255,7 +251,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
           </p>
         </div>
 
-        {/* Search */}
         {!plan && (
           <div className="mb-6">
             <div className="flex items-center gap-2 rounded-2xl px-4 py-3" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}>
@@ -289,7 +284,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
           </div>
         )}
 
-        {/* Step 1: groups */}
         {!group && !plan && (
           <div>
             <div className="text-xs uppercase tracking-widest mb-3 font-medium" style={{ color: "#a892b5" }}>Step 1 — Choose a job family group</div>
@@ -313,7 +307,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
           </div>
         )}
 
-        {/* Step 2: roles */}
         {group && !role && !plan && (
           <div>
             <button onClick={() => setGroup(null)} className="flex items-center gap-1 text-sm mb-4" style={{ color: C.aqua }}>
@@ -336,7 +329,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
           </div>
         )}
 
-        {/* Step 3: level + generate */}
         {role && !plan && (
           <div>
             <button onClick={() => setRole(null)} className="flex items-center gap-1 text-sm mb-4" style={{ color: C.aqua }}>
@@ -386,7 +378,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
           </div>
         )}
 
-        {/* Output */}
         {plan && role && (
           <div>
             <div className="flex items-center justify-between mb-5">
@@ -399,7 +390,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
               </button>
             </div>
 
-            {/* Reshaping */}
             <div className="p-5 rounded-2xl mb-4" style={{ background: "linear-gradient(135deg, #441f72, #1e0023)", border: "1px solid rgba(255,255,255,0.1)" }}>
               <div className="flex items-center gap-2 mb-2">
                 <Sparkles size={16} color={C.sunrays} />
@@ -408,7 +398,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
               <p className="text-sm leading-relaxed" style={{ color: C.white }}>{plan.reshaping}</p>
             </div>
 
-            {/* Skill areas */}
             <div className="p-5 rounded-2xl mb-4" style={{ background: C.sand }}>
               <div className="flex items-center gap-2 mb-3">
                 <Target size={16} color={C.pink} />
@@ -427,7 +416,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
               </div>
             </div>
 
-            {/* Tools */}
             <div className="p-5 rounded-2xl mb-4" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
               <div className="flex items-center gap-2 mb-3">
                 <Wrench size={16} color={C.aqua} />
@@ -443,7 +431,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
               </div>
             </div>
 
-            {/* Timeline */}
             <div className="p-5 rounded-2xl mb-4" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
               <div className="flex items-center gap-2 mb-3">
                 <CalendarClock size={16} color={C.sunrays} />
@@ -468,7 +455,6 @@ Provide 3-4 skillAreas, 3-4 tools, 3 timeline phases, 2-3 starterPrompts.`;
               </div>
             </div>
 
-            {/* Starter prompts */}
             <div className="p-5 rounded-2xl" style={{ background: C.sand }}>
               <div className="flex items-center gap-2 mb-3">
                 <MessageSquareText size={16} color={C.pink} />
